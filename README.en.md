@@ -53,7 +53,7 @@ Roughly 11.5K tokens of technical material as the first turn, then five follow-u
 | 4 | 11663 | 11645 | 18 | **369 ms** | 32.3 tok/s |
 | 5 | 11678 | 11658 | 20 | **415 ms** | 35.5 tok/s |
 
-![Only the first turn makes you wait](figures/fig1-chat-ttft.png)
+![Only the first turn makes you wait](figures/en/fig1-chat-ttft.png)
 
 **Only turn 1 makes you wait.** The "long prompts take 100+ seconds" figure from cold-start
 benchmarks does not describe normal conversation at all.
@@ -66,7 +66,7 @@ benchmarks does not describe normal conversation at all.
 | | TTFT | 186,131 ms | **22,082 ms** |
 | | decode | 54.2 tok/s | **69.4 tok/s** |
 
-![Single vs dual GPU](figures/fig2-dual-vs-single.png)
+![Single vs dual GPU](figures/en/fig2-dual-vs-single.png)
 
 **Why**, straight from the engine log:
 
@@ -89,7 +89,7 @@ Once the chunk borrows them, 99% of experts must stream from disk — a 61-secon
 | 112K prefill | 1068.8 | 1088.8 | **1121.4** |
 | available slots | 2355 | 2310 | **2401** |
 
-![KV cache formats](figures/fig3-kv-prefill.png)
+![KV cache formats](figures/en/fig3-kv-prefill.png)
 
 **q4_0 wins on raw speed, but at a real cost** (see finding 6). At 112K tokens all three are
 within 5% — the KV format stops being the bottleneck.
@@ -104,7 +104,7 @@ Eight requests of 6233 tokens each (unique nonce forcing a full prefill every ti
 | int8 | 1220 MB | **18.8 MB** |
 | k8v4 | 273 MB | **36.9 MB** |
 
-![Disk I/O](figures/fig4-disk-io.png)
+![Disk I/O](figures/en/fig4-disk-io.png)
 
 > The first k8v4 run reported 2153 MB written. **Re-running disproved it** — same config, 36.9 MB.
 > External interference.
