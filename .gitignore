@@ -1,0 +1,14 @@
+# 临时与系统文件
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 编辑器
+.vscode/
+.idea/

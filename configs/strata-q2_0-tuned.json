@@ -1,0 +1,49 @@
+{
+ "exe": "D:\\AI\\Strata\\engine\\strata.exe",
+ "args": [
+  "--pack",
+  "D:\\AI\\Strata-data\\packs\\q2_0",
+  "--native",
+  "D:\\AI\\Strata-data\\models\\Q2_0\\Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00001-of-00002.gguf",
+  "--ple-gguf",
+  "D:\\AI\\Strata-data\\models\\Q2_0\\Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00002-of-00002.gguf",
+  "--expert-profile",
+  "D:\\AI\\Strata\\data\\expert-profile.bin",
+  "--expert-cache",
+  "auto",
+  "--prefill",
+  "auto",
+  "--spec",
+  "4",
+  "--spec-min-p",
+  "0.5",
+  "--mtp",
+  "D:\\AI\\Strata-data\\mtp\\rt",
+  "--max-context",
+  "131072",
+  "--kv",
+  "k8v4",
+  "--resident-experts",
+  "--remote-expert-opt",
+  "--pool-workers",
+  "15"
+ ],
+ "cwd": "D:\\AI\\Strata",
+ "tokenizer": "D:\\AI\\Strata-data\\packs\\q2_0\\tokenizer",
+ "model_name": "qwen3.8-flash-next-q2_0",
+ "log": "D:\\AI\\Strata\\strata-q2_0-tuned.log",
+ "lib_dirs": [
+  "D:\\AI\\Strata\\.venv\\Lib\\site-packages\\nvidia\\cu13\\bin\\x86_64"
+ ],
+ "port": 8081,
+ "gpu": [
+  1,
+  0
+ ],
+ "gpus_asked": true,
+ "layer_split": "auto",
+ "env": {
+  "STRATA_RESIDENT_HEADROOM_GIB": "3"
+ },
+ "fit_max_tokens": true
+}
